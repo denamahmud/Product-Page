@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
+
+
+const isPrad = process.env.NODE_ENV = 'production';
+
 const nextConfig = { 
+          basePath : isPrad ?  "next-blog-deployment" : "",
           output :  'export',
           reactStrictMode: true,
           images: {
@@ -13,6 +18,5 @@ const nextConfig = {
             ],
           },
         }
-        
-        module.exports = nextConfig
+ module.exports = nextConfig
         
